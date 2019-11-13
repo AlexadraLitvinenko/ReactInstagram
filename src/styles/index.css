@@ -1,0 +1,198 @@
+body {
+  background: #FFFFFF;
+}
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__logo {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 144px;
+  top: 32px;
+ }
+
+.SignUp {
+  position: absolute;
+  width: 393px;
+  height: 569px;
+  background: #FFFFFF;
+}
+.SignUp__form__buttton {
+  left: 30px;
+  position: absolute;
+  width: 281px;
+  height: 36px;
+  background: #07319D;
+  border-radius: 4px;
+  color: white;
+}
+.SignUp__button {
+  position: absolute;
+  width: 137px;
+  height: 16px;
+  left: 999px;
+  top: 54px;
+  color: #07319D;
+}
+.SignUp__link {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #07319D;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.SignIn__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+  background: rgba(47,46,46,0.8);
+}
+.SignIn {
+  position: absolute;
+  width: 500px;
+  height: 440px;
+  background: #FFFFFF;
+}
+.SignIn__button {
+  position: absolute;
+  width: 130px;
+  height: 36px;
+  left: 837px;
+  top: 44px;
+  background: #07319D;
+  border-radius: 4px;
+  color: white;
+}
+
+.ui-form h3 {
+  left: 30px;
+  position: relative;
+  z-index: 5;
+  margin: 0 0 60px;
+  text-align: left;
+  color: #000000;
+  font-size: 30px;
+  font-weight: normal;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.form-row {
+  position: relative;
+  margin-bottom: 28px;
+  left: 30px;
+}
+.form-row input {
+  left: 30px;
+  display: block;
+  width: 80%;
+  padding: 0 10px;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border-width: 0;
+  border-bottom: 0.5px solid #DDE2E8;
+  transition: all 0.2s ease;
+}
+.form-row label {
+  position: absolute;
+  left: 30px;
+  transform: translateY( -35px);
+  transition: all 0.2s ease;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #B7C2CE;
+}
+.form-row input:focus {
+  outline: 0;
+  border-color: #B7C2CE;
+}
+.form-row input:focus + label, 
+.form-row input:valid + label {
+  transform: translateY(-60px);
+  margin-left: -14px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: 0;
+  border-color: #B7C2CE;
+  color: #B7C2CE;
+}
+
+.SignIn__form__button {
+  width: 281px;
+  height: 36px;
+  left: 330px;
+  top: 44px;
+  background: #07319D;
+  border-radius: 4px;
+  color: white;
+  margin-left: 30px;
+}
+
+.postsHolder {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-content: stretch;
+}
+.post {
+  width: 304px;
+  height: 415px;
+  left: 144px;
+  top: 215px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.15);
+}
+.profile__likeAndComment {
+  display: inline;
+}
+.profile__photo {
+  position: relative;
+  width: 304px;
+  height: 315px;
+}
+.profile__likebox {
+  position: relative;
+  left: 7.89%;
+  right: 53.95%;
+  top: 89.4%;
+  bottom: 3.86%;
+  width: 116px;
+  height: 28px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+.profile__commentbox {
+  position: relative;
+  left: 53.95%;
+  right: 7.89%;
+  top: 89.4%;
+  width: 116px;
+  height: 28px;
+  bottom: 3.86%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
