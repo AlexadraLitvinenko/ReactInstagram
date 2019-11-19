@@ -6,15 +6,14 @@ import SignUp from './SignUp';
 import Main from './Main';
 const App = () => (
   <div className="App">
-    <Main />
     <BrowserRouter>
         <Switch>
             <Route exact path="/">
-                <Main />
+                <Main isLogged={false} />
             </Route>
             <Route path="/SignUp" component={SignUp}/>
             <Route path="/SignIn" component={SignIn}/>
-            <Route path="/Profile" component={Profile} />
+            <Route path="/Profile" component={Profile} path="/:user" />
         </Switch>
     </BrowserRouter>
     </div>

@@ -12,13 +12,15 @@ body {
   position: absolute;
   width: 200px;
   height: 60px;
-  left: 144px;
+  left: 10%;
   top: 32px;
  }
 
 .SignUp {
-  position: absolute;
-  width: 393px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 500px;
   height: 569px;
   background: #FFFFFF;
 }
@@ -47,19 +49,13 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
-.SignIn__container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  
-  background: rgba(47,46,46,0.8);
-}
+
 .SignIn {
-  position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: center;
   width: 500px;
   height: 440px;
-  background: #FFFFFF;
 }
 .SignIn__button {
   position: absolute;
@@ -73,6 +69,7 @@ body {
 }
 
 .ui-form h3 {
+  width: 300px;
   left: 30px;
   position: relative;
   z-index: 5;
@@ -83,17 +80,19 @@ body {
   font-weight: normal;
   font-family: Roboto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   line-height: 28px;
 }
 
 .form-row {
+  width: 300px;
   position: relative;
   margin-bottom: 28px;
   left: 30px;
 }
 .form-row input {
+  width: 300px;
   left: 30px;
   display: block;
   width: 80%;
@@ -154,7 +153,7 @@ body {
     flex-wrap: wrap;
     margin-top: 100px;
     justify-content: space-between;
-    align-content: stretch;
+    align-content: space-around;
 }
 .post {
   width: 304px;
@@ -165,7 +164,11 @@ body {
   box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.15);
 }
 .profile__likeAndComment {
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
 }
 .profile__photo {
   position: relative;
@@ -173,11 +176,10 @@ body {
   height: 315px;
 }
 .profile__likebox {
+  display: flex;
+  align-items: center;
   position: relative;
-  left: 7.89%;
-  right: 53.95%;
-  top: 89.4%;
-  bottom: 3.86%;
+  justify-content: center;
   width: 116px;
   height: 28px;
   background: #FFFFFF;
@@ -185,14 +187,108 @@ body {
   border-radius: 2px;
 }
 .profile__commentbox {
+  display: flex;
+  align-items: center;
   position: relative;
-  left: 53.95%;
-  right: 7.89%;
-  top: 89.4%;
+  justify-content: center;
   width: 116px;
   height: 28px;
-  bottom: 3.86%;
   background: #FFFFFF;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+}
+.profile__information {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 55px;
+  left: 66%;
+  top: 30px;
+  font-size: 20px;
+  color: #07319D;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.Modal_SignUp {
+  position: relative;
+  top: 10%;
+  left: 35%;
+  width: 393px;
+  height: 569px;
+  background: #FFFFFF;
+}
+.Modal_SignIn {
+  position: relative;
+  top: 10%;
+  left: 35%;
+  width: 393px;
+  height: 440px;
+  background: #FFFFFF;
+}
+.Modal_Comments {
+  position: relative;
+  top: 10%;
+  left: 20%;
+  width: 800px;
+  height: 500px;
+  background: #FFFFFF;
+}
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Comments {
+  display: flex;
+  flex-direction: row;
+}
+.Comments__photo {
+  width: 400px;
+  height: 400px;
+}
+.Comments__photo p {
+  width: 400px;
+}
+
+.post__button {
+  position: relative;
+  width: 130px;
+  height: 36px;
+  left: 66%;
+  top: 44px;
+  color: white;
+  background: #07319D;
+  border-radius: 4px;
+}
+
+.previewComponent {
+  position: relative;
+  left: 20%;
+  top: 10%;
+}
+.postLoader__button {
+  width: 130px;
+  height: 36px;
+  color: white;
+  background: #07319D;
+  border-radius: 4px;
+}
+
+.Comments__comment {
+  left: 10%;
+  outline: 0;
+  border-color: #B7C2CE;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #07319D;
 }

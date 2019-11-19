@@ -1,6 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './src/styles/index.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './src/reducers';
 import App from './src/components/App'
-sessionStorage.setItem('isLogged', false);
-render(<App />, document.getElementById('root'));
+const store = createStore(rootReducer);
+
+render(<Provider store={store}> <App /> </Provider>, document.getElementById('root'));

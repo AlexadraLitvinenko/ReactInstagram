@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import { Link, Route, Redirect } from 'react-router-dom';
-import Profile from './Profile';
+import { Link } from 'react-router-dom';
 import add_userAction from '../actions/add_user';
 
 const SignUp = () => {
@@ -15,19 +14,14 @@ const SignUp = () => {
     var dic = 'abcdefghijklmnopqrstuvwxyz1234567890';
     for (var i = 0; i < strong; i++) {
       pass += dic.charAt(Math.floor(Math.random() * dic.length));
-    }};
+    }
+    return pass
+  };
 
 const [fullName = '', createfullName ] = useState();
 const [name = '', createName ] = useState();
 const [email = '', createLogin ] = useState();
 const [password = '', createPassword ] = useState();
-
-const saveUser = () => {
-  const user = {fullName: fullName, name: name, email: email, password: password};
-  const id = generateID();
-  console.log(user);
-  dispatch(add_userAction(id, user));
-};
   
 const onSubmit = (event) => {
     event.preventDefault();
@@ -39,6 +33,9 @@ const createUser = field => ({target})=> {
     if (field === 'email') createLogin(target.value);
     if (field === 'password') createPassword(target.value);
 };
+
+const userid = generateID();
+const user = {fullName: fullName, name: name, email: email, password: password};
   
 return (
     <div>
@@ -59,9 +56,10 @@ return (
       <div className='form-row'>
         <input type='password' id='email' required autoComplete='off' onChange={createUser('password')} />
         <label htmlFor='password'>Пароль</label>
-      </div>'
+      </div>
       <p>
-      <Link to = { '/Profile/${id}' } ><button className='SignUp__form__buttton' onClick={() => {saveUser()}}>
+      <Link to = {{pathname: '/Profile/'+ userid, state: {userid, user}}} ><button className='SignUp__form__buttton' 
+      onClick={() => {dispatch(add_userAction(userid, user)) && sessionStorage.setItem('isLogged', true)}} >
           Зарегистрироваться</button></Link>
       </p>
       </form>
