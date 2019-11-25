@@ -1,7 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 
 import userReducer from "./userReducer";
-import likeCommentReducer from './likeCommentReducer';
-import addPostReducer from './addPostReducer';
+import likeAndCommentsReducer from "./likeAndCommentsReducer";
+import addPostReducer from "./addPostReducer";
 
-export default combineReducers({ newuser: userReducer, likecomment: likeCommentReducer, addPost: addPostReducer });
+export default combineReducers({
+  users: userReducer,
+  likeAndComments: likeAndCommentsReducer,
+  addPost: addPostReducer
+});

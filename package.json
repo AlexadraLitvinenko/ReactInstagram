@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:dev": "webpack --mode=development --watch",
-    "build": "webpack --mode=development --watch && node server.js",
-    "server": "node server.js",
-    "deploy": "concurrently \"npm run server\" \"npm run build:dev\"",
-    "test": "jest"
+    "deploy": "concurrently \"npm run server\" \"npm run build:dev\""
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +14,8 @@
     "@babel/preset-env": "7.6.0",
     "@babel/preset-react": "7.0.0",
     "babel-loader": "^8.0.6",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "html-webpack-plugin": "3.2.0",
     "jest": "^24.9.0",
     "webpack": "4.40.2",
@@ -41,6 +40,7 @@
     "node": "^12.12.0",
     "nodemon": "^1.19.4",
     "npm": "^6.13.0",
+    "prettier": "^1.19.1",
     "react": "16.9.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "16.9.0",

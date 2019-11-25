@@ -1,5 +1,9 @@
+:root {
+  --background-color: #FFFFFF;
+  --button-color: #07319D;
+}
 body {
-  background: #FFFFFF;
+  background: var(--background-color);
 }
 .main {
   position: relative;
@@ -22,14 +26,14 @@ body {
   justify-content: center;
   width: 500px;
   height: 569px;
-  background: #FFFFFF;
+  background: var(--background-color);
 }
 .SignUp__form__buttton {
   left: 30px;
   position: absolute;
   width: 281px;
   height: 36px;
-  background: #07319D;
+  background: var(--button-color);
   border-radius: 4px;
   color: white;
 }
@@ -39,13 +43,13 @@ body {
   height: 16px;
   left: 999px;
   top: 54px;
-  color: #07319D;
+  color: var(--button-color);
 }
 .SignUp__link {
   background: none!important;
   border: none;
   padding: 0!important;
-  color: #07319D;
+  color: var(--button-color);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -63,7 +67,7 @@ body {
   height: 36px;
   left: 837px;
   top: 44px;
-  background: #07319D;
+  background: var(--button-color);
   border-radius: 4px;
   color: white;
 }
@@ -75,7 +79,7 @@ body {
   z-index: 5;
   margin: 0 0 60px;
   text-align: left;
-  color: #000000;
+  color: black;
   font-size: 30px;
   font-weight: normal;
   font-family: Roboto;
@@ -137,7 +141,7 @@ body {
   height: 36px;
   left: 330px;
   top: 44px;
-  background: #07319D;
+  background: var(--button-color);
   border-radius: 4px;
   color: white;
   margin-left: 30px;
@@ -160,7 +164,7 @@ body {
   height: 415px;
   left: 144px;
   top: 215px;
-  background: #FFFFFF;
+  background: var(--background-color);
   box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.15);
 }
 .profile__likeAndComment {
@@ -182,7 +186,7 @@ body {
   justify-content: center;
   width: 116px;
   height: 28px;
-  background: #FFFFFF;
+  background: var(--background-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
@@ -193,7 +197,7 @@ body {
   justify-content: center;
   width: 116px;
   height: 28px;
-  background: #FFFFFF;
+  background: var(--background-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
@@ -207,8 +211,8 @@ body {
   left: 66%;
   top: 30px;
   font-size: 20px;
-  color: #07319D;
-  background: #FFFFFF;
+  color: var(--button-color);
+  background: var(--background-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
@@ -219,7 +223,7 @@ body {
   left: 35%;
   width: 393px;
   height: 569px;
-  background: #FFFFFF;
+  background: var(--background-color);
 }
 .Modal_SignIn {
   position: relative;
@@ -227,7 +231,7 @@ body {
   left: 35%;
   width: 393px;
   height: 440px;
-  background: #FFFFFF;
+  background: var(--background-color);
 }
 .Modal_Comments {
   position: relative;
@@ -235,7 +239,7 @@ body {
   left: 20%;
   width: 800px;
   height: 500px;
-  background: #FFFFFF;
+  background: var(--background-color);
 }
 .Overlay {
   position: fixed;
@@ -264,7 +268,7 @@ body {
   left: 66%;
   top: 44px;
   color: white;
-  background: #07319D;
+  background: var(--button-color);
   border-radius: 4px;
 }
 
@@ -277,18 +281,48 @@ body {
   width: 130px;
   height: 36px;
   color: white;
-  background: #07319D;
+  background: var(--button-color);;
   border-radius: 4px;
 }
 
 .Comments__comment {
+  position: relative;
+  width: 130px;
+  height: 36px;
   left: 10%;
-  outline: 0;
-  border-color: #B7C2CE;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #07319D;
+  color: white;
+  background: var(--button-color);
+  border-radius: 4px;
+}
+
+.Animation {
+  display: flex;
+  flex-direction: row;
+}
+
+.Animation-photos {
+  position: relative;
+  top: 200px;
+  left: 30%;
+  height: 600px;
+}
+
+.Animation-phone {
+  position: relative;
+  height: 600px;
+}
+
+.Animation-screen {
+  position: absolute;
+ 
+  top: 95px;
+  left: 146px;
+  height: 418px;
+}
+
+.Animation-text {
+  position: relative;
+  top: 450px;
+  left: 30%;
+  color: var(--button-color);
 }

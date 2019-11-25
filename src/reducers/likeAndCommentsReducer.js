@@ -1,11 +1,11 @@
 import { APP_ACTIONS } from '../constants';
 import Axios from 'axios';
+import likeAndComments from '../data/likeAndComments';
 
-const likeCommentReducer = (state = 
-    [{likes: [0, 0, 0, 0, 0, 0, 0]}, {comments: [[['user1', 'So nice!'] , ['user2', 'Yeah']], [], [], [], [], [], []]} ], action) => {
+const likeAndCommentsReducer = (state = likeAndComments, action) => {
     switch(action.type) {
         case APP_ACTIONS.INCREASE_LIKE:
-            state[0].likes[action.postID] = action.likes;
+            state[0].likes[action.postID] = state[0].likes[action.postID] + 1; //action.likes;
             return state;
         case APP_ACTIONS.ADD_COMMENT:
             state[1].comments[action.postID].push([action.user, action.comment]);
@@ -20,4 +20,4 @@ const likeCommentReducer = (state =
     }
 };
 
-export default likeCommentReducer;
+export default likeAndCommentsReducer;

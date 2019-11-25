@@ -1,39 +1,43 @@
-import React, { useState } from 'react';
-import Post from './Post';
-import Main from './Main';
-import  Modal  from 'react-modal';
-import PostLoader from './PostLoader';
-import {useDispatch, useSelector} from "react-redux";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Modal from "react-modal";
 
-const Profile = (props) => {
+import Post from "./Post";
+import Main from "./Main";
+import PostLoader from "./PostLoader";
 
-    const dispatch = useDispatch();
-    const photos = useSelector(state => state.addPost);
-    console.log(props.location.state.userid, props.location.state.user.fullName);
-    console.log('session from profile ', sessionStorage.getItem('isLogged'));
-    const [postModal,setpostModal ] = useState(false);
-    
-    return (
-        <div>
-            <Main isLogged={true} userName={props.location.state.user.fullName} />
-            <button className='post__button' onClick={() => setpostModal(true)}>Добавить пост</button>
-            {postModal?
-            <Modal
-            isOpen={postModal}
-            onRequestClose={() => setpostModal(false)}
-            ariaHideApp={false}
-            className='Modal_Comments'
-            overlayClassName="Overlay">
-                <PostLoader />
-            </Modal>
-        :null}
-        <div className='postsHolder'>
-        { photos.map((item, index) => { return (
-            <Post photo={item} key={index} postID={index} userName={props.location.state.user.fullName} />)
-        }) }
-        </div>
-        </div>
-    );
+const Profile = props => {
+  const photos = useSelector(state => state.addPost);
+  const userName = props.location.state.user.fullName;
+  const [postModal, setpostModal] = useState(false);
+
+  return (
+    <div>
+      <Main isLogged={true} userName={userName} />
+      <button className="post__button" onClick={() => setpostModal(true)}>
+        Добавить пост
+      </button>
+      {postModal ? (
+        <Modal
+          isOpen={postModal}
+          onRequestClose={() => setpostModal(false)}
+          ariaHideApp={false}
+          className="Modal_Comments"
+          overlayClassName="Overlay"
+        >
+          <PostLoader />
+        </Modal>
+      ) : null}
+      <div className="postsHolder">
+        {photos.map((item, index) => {
+          return (
+            <Post photo={item} key={index} postID={index} userName={userName} />
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Profile;
